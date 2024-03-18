@@ -20,7 +20,7 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="flex flex-col flex-wrap min-h-svh bg-gray-100 dark:bg-gray-900">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -33,9 +33,18 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="flex-1">
                 {{ $slot }}
             </main>
+
+            <footer class="bg-white dark:bg-gray-800 shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between dark:text-white/50">
+                        <div>Copyright {{ now()->format('Y') }} Pilot Pay</div>
+                        <div>Build by NT4C Labs</div>
+                    </div>
+                </div>
+            </footer>
         </div>
 
         @stack('modals')
