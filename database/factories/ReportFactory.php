@@ -24,7 +24,7 @@ class ReportFactory extends Factory
         return [
             'user_id' => $user->id,
             'wage_year' => '2023',
-            'airline_id' => Airline::get()->shuffle()->first()->id,
+            'airline_slug' => 'atlas-air',
             'fleet' => collect(ReportFleets::cases())->shuffle()->first()->name,
             'seat' => $this->faker->boolean(50) ? 'CA' : 'FO',
         ];

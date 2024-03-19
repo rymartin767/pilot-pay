@@ -20,17 +20,12 @@ class Report extends Model
     {
         // 1l3H7-nt4c-1-2023
         static::creating(function (Report $report) {
-            $report->slug = Str::of(Str::random(5) . '-' . $report->user->name . '-' . $report->airline->id . '-' . $report->wage_year)->slug();
+            $report->slug = Str::of(Str::random(5) . '-' . $report->user->name . '-' . $report->airline_slug . '-' . $report->wage_year)->slug();
         });
     }
 
     public function user() : Relation
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function airline() : Relation
-    {
-        return $this->belongsTo(Airline::class);
     }
 }

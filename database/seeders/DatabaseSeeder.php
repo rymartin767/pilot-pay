@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([
-            AirlineSeeder::class,
+            // AirlineSeeder::class,
         ]);
     }
 }
