@@ -40,7 +40,7 @@
             <footer class="bg-white dark:bg-gray-800 shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between dark:text-white/50">
-                        <div>Copyright {{ now()->format('Y') }} Pilot Pay</div>
+                        <div><a href="/">Copyright {{ now()->format('Y') }} Pilot Pay</a></div>
                         <div>Build by NT4C Labs</div>
                     </div>
                 </div>

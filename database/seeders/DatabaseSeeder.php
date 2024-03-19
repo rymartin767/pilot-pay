@@ -19,5 +19,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'ryan@nt4c.com',
             'password' => Hash::make('test1234')
         ]);
+
+        $this->call([
+            AirlineSeeder::class,
+        ]);
     }
 }
