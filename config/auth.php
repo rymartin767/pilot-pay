@@ -122,5 +122,6 @@ return [
     */
 
     'admin_email' => env('ADMIN_EMAIL'),
+    'giant_api_token' => env('GIANT_API_TOKEN'),
 
 ];
