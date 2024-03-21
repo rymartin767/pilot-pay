@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements FilamentUser
@@ -74,5 +75,10 @@ class User extends Authenticatable implements FilamentUser
     public function isAdmin() : bool
     {
         return $this->email == config('auth.admin_email');
+    }
+
+    public function reports() : Relation
+    {
+        return $this->hasMany(Report::class);
     }
 }
