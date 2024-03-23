@@ -19,12 +19,10 @@ class ReportFactory extends Factory
      */
     public function definition(): array
     {
-        $user = User::factory()->create();
-
         return [
-            'user_id' => $user->id,
+            'user_id' => User::factory(),
             'wage_year' => '2023',
-            'airline_slug' => 'atlas-air',
+            'employer' => 'Atlas Air',
             'fleet' => collect(ReportFleets::cases())->shuffle()->first()->name,
             'seat' => $this->faker->boolean(50) ? 'CA' : 'FO',
         ];

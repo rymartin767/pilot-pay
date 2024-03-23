@@ -10,9 +10,10 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class User extends Authenticatable implements FilamentUser
 {
@@ -77,8 +78,13 @@ class User extends Authenticatable implements FilamentUser
         return $this->email == config('auth.admin_email');
     }
 
-    public function reports() : Relation
+    public function reports() : HasMany
     {
         return $this->hasMany(Report::class);
+    }
+
+    public function earnings() : HasManyThrough
+    {
+        return $this->hasManyThrough(Earning::class, Report::class);
     }
 }

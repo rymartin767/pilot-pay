@@ -14,6 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->append(Admin::class);
+        $middleware->redirectTo(
+            guests: '/login',
+            users: '/reports'
+        );
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

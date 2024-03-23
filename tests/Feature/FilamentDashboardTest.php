@@ -14,3 +14,9 @@ test('filament dashboard is available to auth users', function () {
         ->get('/dashboard')
         ->assertStatus(200);
 });
+
+test('panel only show earnings tab if earnings exist for a user', function () {
+    actingAs(User::factory()->create())
+        ->get('/dashboard')
+        ->assertStatus(200);
+})->todo();

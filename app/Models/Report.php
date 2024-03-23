@@ -5,7 +5,8 @@ namespace App\Models;
 use App\Enums\ReportFleets;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Report extends Model
@@ -24,8 +25,13 @@ class Report extends Model
         });
     }
 
-    public function user() : Relation
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function earnings() : HasOne
+    {
+        return $this->hasOne(Earning::class);
     }
 }
