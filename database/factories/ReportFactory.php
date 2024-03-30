@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\User;
 use App\Models\Airline;
 use App\Enums\ReportFleets;
+use Illuminate\Support\Number;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,7 +23,9 @@ class ReportFactory extends Factory
         return [
             'user_id' => User::factory(),
             'wage_year' => '2023',
+            'longevity' => Number::ordinal($this->faker->numberBetween(1,12)) . ' Year',
             'employer' => 'Atlas Air',
+            'employer_logo_url' => 'logos/atlas-air-300.webp',
             'fleet' => collect(ReportFleets::cases())->shuffle()->first()->name,
             'seat' => $this->faker->boolean(50) ? 'CA' : 'FO',
         ];

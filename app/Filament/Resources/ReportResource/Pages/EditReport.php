@@ -17,9 +17,12 @@ class EditReport extends EditRecord
             Actions\DeleteAction::make()
                 ->label('Delete 2023 Report'),
 
-            // Action::make('save')
-            //     ->label('Save changes')
-            //     ->action('save'),
+            Action::make('view-report')
+                ->label('View Report!')
+                ->color('info')
+                ->url(route('reports.show', [
+                    'report' => $this->record
+                ])),
         ];
     }
 

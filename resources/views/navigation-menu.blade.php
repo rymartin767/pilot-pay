@@ -13,8 +13,14 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('reports.index') }}" :active="request()->routeIs('reports.index')">
-                        {{ __('Reports') }}
+                        {{ __('HQ') }}
                     </x-nav-link>
+
+                    @auth
+                        <x-nav-link href="{{ route('filament.dashboard.pages.dashboard') }}">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                    @endauth
                 </div>
             </div>
 
@@ -30,7 +36,7 @@
                             @else
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                        {{ Auth::user()->name }}
+                                        {{ Auth::user()->name ?? 'Guest' }}
 
                                         <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -41,6 +47,7 @@
                         </x-slot>
 
                         <x-slot name="content">
+                            @auth
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
@@ -61,6 +68,19 @@
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
+                            @else
+                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                    {{ __('Accounts') }}
+                                </div>
+
+                                <x-dropdown-link href="{{ route('register') }}">
+                                    {{ __('Register') }}
+                                </x-dropdown-link>
+
+                                <x-dropdown-link href="{{ route('login') }}">
+                                    {{ __('Log In') }}
+                                </x-dropdown-link>
+                            @endauth
                         </x-slot>
                     </x-dropdown>
                 </div>
@@ -96,12 +116,13 @@
                 @endif
 
                 <div>
-                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name ?? 'Guest' }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email ?? '' }}</div>
                 </div>
             </div>
 
             <div class="mt-3 space-y-1">
+                @auth
                 <!-- Account Management -->
                 <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
@@ -116,6 +137,15 @@
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>
+                @else
+                    <x-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
+                        {{ __('Register') }}
+                    </x-responsive-nav-link>
+
+                    <x-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
+                        {{ __('Login') }}
+                    </x-responsive-nav-link>
+                @endauth
             </div>
         </div>
     </div>

@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Filament\Panel;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Auth\MustVerifyEmail;
 use Laravel\Jetstream\HasProfilePhoto;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
@@ -22,6 +23,7 @@ class User extends Authenticatable implements FilamentUser
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use MustVerifyEmail;
 
     public function canAccessPanel(Panel $panel): bool
     {

@@ -39,6 +39,9 @@ class EarningResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('total_compensation')
+                    ->formatStateUsing(fn ($state) => Number::currency($state)),
+                TextColumn::make('report.employer'),
                 TextColumn::make('flight_pay')
                     ->formatStateUsing(fn ($state) => Number::currency($state))
 
@@ -48,7 +51,7 @@ class EarningResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                    ->url(fn (Earning $record): string => "/dashboard/reports/{$record->report->id}/edit"),
+                    ->url(fn (Earning $record): string => "/dashboard/reports/{$record->report_id}/edit"),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

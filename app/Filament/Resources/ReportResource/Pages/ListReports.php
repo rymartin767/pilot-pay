@@ -15,7 +15,8 @@ class ListReports extends ListRecords
     {
         if (Auth::user()->reports->isEmpty()) {
             return [
-                Actions\CreateAction::make(),
+                Actions\CreateAction::make()
+                    ->label('Create Report'),
             ];
         } else {
             return [];

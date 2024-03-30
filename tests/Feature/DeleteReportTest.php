@@ -1,14 +1,16 @@
 <?php
 
 use App\Models\Report;
+use App\Models\Earning;
 use Filament\Actions\DeleteAction;
+use function Pest\Laravel\actingAs;
 use function Pest\Livewire\livewire;
 use App\Filament\Resources\ReportResource\Pages\EditReport;
-use App\Models\Earning;
 
 it('can delete', function () {
     $report = Report::factory()->create();
- 
+    actingAs($report->user);
+
     livewire(EditReport::class, [
         'record' => $report->getRouteKey(),
     ])
@@ -18,10 +20,12 @@ it('can delete', function () {
 });
 
 test('deleted reports will also delete earnings', function () {
-    $earnings = Earning::factory()->create();
+    $report = Report::factory()->create();
+    actingAs($report->user);
+    $earnings = $report->earnings()->create(Earning::factory()->raw());
 
     livewire(EditReport::class, [
-        'record' => $earnings->report->getRouteKey(),
+        'record' => $report->getRouteKey(),
     ])
         ->callAction(DeleteAction::class);
  

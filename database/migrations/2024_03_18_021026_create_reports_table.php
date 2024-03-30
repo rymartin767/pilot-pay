@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->string('employer');
+            $table->string('employer_logo_url')->nullable();
             $table->string('wage_year');
+            $table->string('longevity');
             $table->string('fleet');
             $table->string('seat');
             $table->string('slug')->unique();

@@ -14,7 +14,15 @@ return new class extends Migration
         Schema::create('earnings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('report_id')->constrained()->onDelete('cascade');
-            $table->integer('flight_pay');
+            $table->unsignedInteger('total_compensation')->nullable();
+            $table->unsignedInteger('flight_pay');
+            $table->unsignedInteger('profit_sharing');
+            $table->unsignedInteger('employer_retirement_contribution');
+            $table->unsignedInteger('employer_health_savings_contribution');
+            $table->unsignedSmallInteger('days_worked')->nullable();
+            $table->string('block_hours_flown')->nullable();
+            $table->boolean('is_commuter')->nullable();
+            $table->text('report_comment')->fulltext()->nullable();
             $table->timestamps();
         });
     }

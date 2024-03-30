@@ -2,9 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\User;
+use App\Models\Earning;
 use App\Enums\ReportFleets;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,10 +23,18 @@ class Report extends Model
 
     protected static function booted(): void
     {
-        // 1l3H7-nt4c-1-2023
-        static::creating(function (Report $report) {
-            $report->slug = Str::of(Str::random(5) . '-' . $report->user->name . '-' . $report->airline_slug . '-' . $report->wage_year)->slug();
+        static::addGlobalScope('owner', function (Builder $builder) {
+            $builder->where('user_id',  Auth::id());
         });
+        
+        static::creating(function (Report $report) {
+            $report->slug = Str::of($report->wage_year . '-' . $report->user->name . '-' . $report->employer)->slug();
+        });
+    }
+
+    public function path() : string
+    {
+        return 'reports/' . $this->slug;
     }
 
     public function user() : BelongsTo

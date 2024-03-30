@@ -12,6 +12,7 @@ test('landing page returns a successful response', function () {
 test('the log in and register links are on the landing page', function () {
     $this->view('landing')
         ->assertSee('Log in')
+        ->assertSee('View Reports')
         ->assertSee('Register');
 });
 
