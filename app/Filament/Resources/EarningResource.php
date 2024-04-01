@@ -20,7 +20,7 @@ class EarningResource extends Resource
 {
     protected static ?string $model = Earning::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
 
     public static function canAccess(): bool
     {
@@ -39,9 +39,11 @@ class EarningResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('total_compensation')
-                    ->formatStateUsing(fn ($state) => Number::currency($state)),
-                TextColumn::make('report.employer'),
+                TextColumn::make('report.wage_year')
+                    ->description(fn ($record) =>  Number::currency($record->total_compensation)),
+                TextColumn::make('report.employer')
+                    ->description(fn ($record) =>  $record->report->fleet->name . ' ' . $record->report->seat)
+                    ->label('Employer'),
                 TextColumn::make('flight_pay')
                     ->formatStateUsing(fn ($state) => Number::currency($state))
 

@@ -32,10 +32,10 @@ class DashboardPanelProvider extends PanelProvider
                 'primary' => Color::Amber,
             ])
             ->navigationItems([
-                NavigationItem::make('Reports')
-                    ->url('/reports', shouldOpenInNewTab: false)
+                NavigationItem::make('Home')
+                    ->url('/', shouldOpenInNewTab: false)
                     ->icon('heroicon-o-arrow-right-end-on-rectangle')
-                    ->group('Navigate')
+                    ->group('Site Navigation')
                     ->sort(1),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')

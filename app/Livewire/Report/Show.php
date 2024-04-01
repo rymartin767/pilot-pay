@@ -32,14 +32,16 @@ class Show extends Component implements HasForms
         return $form
             ->schema([
                 RichEditor::make('content')
-                    ->required(),
+                    ->required()
+                    ->minLength(10)
+                    ->label(''),
             ])
             ->statePath('data');
     }
     
     public function create(): void
     {
-        dd($this->form->getState());
+        dd($this->form->getState()['content']);
     }
 }
     

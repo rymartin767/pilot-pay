@@ -9,12 +9,19 @@
         <x-report-card :report="$report"></x-report-card>
     </section>
 
-    <section class="mt-6 max-w-3xl mx-auto">
-        <div>REPORT COMMENTS</div>
-        <form wire:submit="create">
+    <section class="mt-12 max-w-3xl mx-auto">
+        <div class="text-2xl font-bold">REPORT COMMENTS</div>
+        <div>
+            NO COMMENTS. LEAVE ONE BELOW.
+        </div>
+    </section>
+
+    <section class="mt-12 max-w-3xl mx-auto">
+        <div class="text-2xl font-bold">ADD A COMMENT</div>
+        <form wire:submit="create" class="mt-2">
             {{ $this->form }}
 
-            <button type="submit">
+            <button type="submit" class="black-button mt-3">
                 Submit
             </button>
         </form>

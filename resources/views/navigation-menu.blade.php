@@ -6,14 +6,14 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('reports.index') }}">
-                        <x-application-mark class="block h-9 w-auto" />
+                        <x-application-logo></x-application-logo>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('reports.index') }}" :active="request()->routeIs('reports.index')">
-                        {{ __('HQ') }}
+                        {{ __('Home') }}
                     </x-nav-link>
 
                     @auth
