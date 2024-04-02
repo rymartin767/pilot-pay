@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Report extends Model
 {
@@ -44,6 +45,11 @@ class Report extends Model
 
     public function earnings() : HasOne
     {
-        return $this->hasOne(Earning::class);
+        return $this->hasOne(Earning::class)->withoutGlobalScopes();
+    }
+
+    public function comments() : HasMany
+    {
+        return $this->hasMany(Comment::class);
     }
 }

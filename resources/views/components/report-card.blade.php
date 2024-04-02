@@ -1,5 +1,5 @@
-<a href="{{ $report->path() }}" class="flex flex-col py-8 rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#b8adad] dark:bg-gradient-to-bl dark:from-gray-800 dark:to-gray-700 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-    <div class="w-full flex flex-col max-w-xl mx-auto">
+<div class="flex flex-col py-8 rounded-lg bg-white shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#b8adad] dark:bg-gradient-to-bl dark:from-gray-800 dark:to-gray-700 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
+    <div class="w-full flex flex-col max-w-xl mx-auto px-3">
         <!-- TOTAL COMPENSATION HEADER -->
         <div class="text-center mb-5">
             <div class="font-black text-5xl text-stone-800 dark:text-white/75">{{ Number::currency($report->earnings->total_compensation ?? 0 ) }}</div>
@@ -10,7 +10,7 @@
         <div class="flex flex-row space-x-4 items-center mb-3">
             <img src="{{ Storage::url($report->employer_logo_url) }}" class="h-16 w-auto rounded-md" alt="Airline Logo" loading="lazy" />
             <div class="flex flex-col font-semibold">
-                <div class="text-xl text-stone-800 dark:text-white/75">{{ $report->employer }} · GTI</div>
+                <div class="text-base lg:text-xl text-stone-800 dark:text-white/75">{{ $report->employer }} · GTI</div>
                 <div class="text-base text-stone-800 dark:text-white/50">{{ $report->fleet->name }} | {{ $report->seat }} | {{ $report->longevity }} Pay</div>
             </div>
         </div>
@@ -45,7 +45,9 @@
                 </div>
             </li>
             <li class="flex items-center pt-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-current text-blue-900"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96v32V480H384V128 96 56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM96 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H96V96zM416 480h32c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H416V480zM224 208c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v48h48c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H288v48c0 8.8-7.2 16-16 16H240c-8.8 0-16-7.2-16-16V320H176c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h48V208z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-current text-blue-900"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96v32V480H384V128 96 56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM96 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H96V96zM416 480h32c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H416V480zM224 208c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v48h48c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H288v48c0 8.8-7.2 16-16 16H240c-8.8 0-16-7.2-16-16V320H176c-8.8 0-16-7.2-16-16V272c0-8.8 7.2-16 16-16h48V208z" />
+                </svg>
                 <div class="flex flex-col sm:flex-row sm:items-center ml-4 font-poppins">
                     <div class="font-normal pt-1 text-slate-800">Company Health Savings Contribution:</div>
                     <div class="font-light pt-1 sm:ml-2 text-xl sm:text-base">{{ Number::currency($report->earnings->employer_health_savings_contribution ) }}</div>
@@ -80,16 +82,25 @@
             </li>
             <li class="pt-3">
                 <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-current text-blue-900"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6 fill-current text-blue-900"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z" />
+                    </svg>
                     <div class="flex flex-col sm:flex-row sm:items-center ml-4 font-poppins">
                         <div class="font-normal pt-1">{{ $report->user->name }} Comments:</div>
                     </div>
                 </div>
-                <div class="font-light pt-3 sm:ml-2 text-xl sm:text-base">{!! $report->earnings->report_comment !!}</div>
+                <div class="font-light pt-3 sm:ml-2 sm:text-base italic text-sm">{!! $report->earnings->report_comment !!}</div>
             </li>
         </ul>
 
-        <!--  -->
-        <div></div>
+        @if(Route::currentRouteName() === 'reports.index')
+            <!-- BUTTON TO SHOW REPORT -->
+            <a href="{{ $report->path() }}" class="black-button mt-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-white w-5 h-5 me-2 -ms-1"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M160 368c26.5 0 48 21.5 48 48v16l72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16V352c0 8.8 7.2 16 16 16h96zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3V474.7v-6.4V468v-4V416H112 64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H448c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H309.3L208 492z" />
+                </svg>
+                {{ $report->comments->count() }} COMMENTS
+            </a>
+        @endif
     </div>
-</a>
+</div>

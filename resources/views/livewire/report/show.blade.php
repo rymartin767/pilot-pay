@@ -5,20 +5,24 @@
         </h2>
     </x-slot>
 
-    <section class="max-w-3xl mx-auto">
+    <section wire:ignore class="max-w-3xl mx-auto px-3">
         <x-report-card :report="$report"></x-report-card>
     </section>
 
-    <section class="mt-12 max-w-3xl mx-auto">
-        <div class="text-2xl font-bold">REPORT COMMENTS</div>
-        <div>
-            NO COMMENTS. LEAVE ONE BELOW.
-        </div>
+    <section class="mt-12 max-w-3xl mx-auto px-3">
+        <div class="text-2xl font-bold mb-2">REPORT COMMENTS</div>
+        @forelse ($comments as $comment)
+            <x-comment :comment="$comment"></x-comment>
+        @empty
+            <div>
+                NO COMMENTS. LEAVE ONE BELOW.
+            </div>
+        @endforelse
     </section>
 
-    <section class="mt-12 max-w-3xl mx-auto">
-        <div class="text-2xl font-bold">ADD A COMMENT</div>
-        <form wire:submit="create" class="mt-2">
+    <section class="mt-12 max-w-3xl mx-auto px-3">
+        <div class="text-2xl font-bold mb-2">ADD A COMMENT</div>
+        <form wire:submit="create" class="">
             {{ $this->form }}
 
             <button type="submit" class="black-button mt-3">
