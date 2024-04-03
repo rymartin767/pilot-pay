@@ -29,6 +29,34 @@ class DatabaseSeeder extends Seeder
             ]))
             ->create();
 
+        Earning::factory()
+            ->for(Report::factory()->state([
+                'employer' => 'Fedex Express',
+                'employer_logo_url' => 'logos/fedex-express-300.webp',
+            ]))
+            ->create();
+
+        Earning::factory()
+            ->for(Report::factory()->state([
+                'employer' => 'Delta Air Lines',
+                'employer_logo_url' => 'logos/delta-air-lines-300.webp',
+            ]))
+            ->create();
+
+        Earning::factory()
+            ->for(Report::factory()->state([
+                'employer' => 'Hawaiian Airlines',
+                'employer_logo_url' => 'logos/hawaiian-airlines-300.webp',
+            ]))
+            ->create();
+
+        Earning::factory()
+            ->for(Report::factory()->state([
+                'employer' => 'American Airlines',
+                'employer_logo_url' => 'logos/american-airlines-300.webp',
+            ]))
+            ->create();
+
         $this->call([
             // AirlineSeeder::class,
         ]);

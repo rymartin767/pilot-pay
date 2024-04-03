@@ -10,7 +10,7 @@
         <div class="flex flex-row space-x-4 items-center mb-3">
             <img src="{{ Storage::url($report->employer_logo_url) }}" class="h-16 w-auto rounded-md" alt="Airline Logo" loading="lazy" />
             <div class="flex flex-col font-semibold">
-                <div class="text-base lg:text-xl text-stone-800 dark:text-white/75">{{ $report->employer }} · GTI</div>
+                <div class="text-base lg:text-xl text-stone-800 dark:text-white/75">{{ $report->employer }}</div>
                 <div class="text-base text-stone-800 dark:text-white/50">{{ $report->fleet->name }} | {{ $report->seat }} | {{ $report->longevity }} Pay</div>
             </div>
         </div>

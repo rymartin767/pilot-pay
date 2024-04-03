@@ -40,7 +40,8 @@ class ReportResource extends Resource
     {
         // See Create Wizard
         $api = Http::withToken(config('auth.giant_api_token'))->get("https://api-v1.giantpilots.com/v1/airlines");
-        $airlines = collect($api['data']);
+        $airlines = collect($api['data'])->sortBy('name');
+        $airlines_array = $airlines->pluck('name', 'name')->toArray();
 
         return $form
             ->schema([
@@ -57,7 +58,7 @@ class ReportResource extends Resource
                         Select::make('employer')
                             ->required()
                             ->label('Employer')
-                            ->options($airlines->pluck('name', 'name')->toArray()),
+                            ->options($airlines_array),
                         Select::make('longevity')
                             ->options([
                                 'Salary' => 'Pay based on annual salary',
