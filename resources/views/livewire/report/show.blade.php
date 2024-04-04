@@ -5,11 +5,11 @@
         </h2>
     </x-slot>
 
-    <section wire:ignore class="max-w-3xl mx-auto px-3">
+    <section wire:ignore class="max-w-2xl mx-auto px-3">
         <x-report-card :report="$report"></x-report-card>
     </section>
 
-    <section class="mt-12 max-w-3xl mx-auto px-3">
+    <section class="mt-12 max-w-2xl mx-auto px-3">
         <div class="text-2xl font-bold mb-2">REPORT COMMENTS</div>
         @forelse ($comments as $comment)
             <x-comment :comment="$comment"></x-comment>
@@ -20,7 +20,7 @@
         @endforelse
     </section>
 
-    <section class="mt-12 max-w-3xl mx-auto px-3">
+    <section class="mt-12 max-w-2xl mx-auto px-3">
         <div class="text-2xl font-bold mb-2">ADD A COMMENT</div>
         <form wire:submit="create" class="">
             {{ $this->form }}

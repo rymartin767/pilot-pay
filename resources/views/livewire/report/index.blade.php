@@ -1,4 +1,4 @@
-<section class="max-w-3xl mx-auto px-3">
+<section class="max-w-2xl mx-auto px-3">
 
     @can('create', App\Models\Report::class)
         <a href="{{ route('filament.dashboard.resources.reports.create') }}" class="black-button">
