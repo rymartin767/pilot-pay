@@ -10,16 +10,22 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Styles -->
+    @livewireStyles
+
 </head>
 
-<body class="font-sans antialiased">
-    <div class="flex flex-col flex-wrap min-h-svh bg-gray-100 dark:bg-gray-900">
-        <main class="flex-1 py-12">
-            {{ $slot }}
-        </main>
+<body class="font-sans antialiased flex flex-col flex-wrap min-h-svh bg-gray-100 dark:bg-gray-900">
+    @include('layouts.header')
 
-        @include('layouts.footer')
-    </div>
+    <main class="flex-1 py-12">
+        {{ $slot }}
+    </main>
+
+    @include('layouts.footer')
+    
+    @livewireScripts
 </body>
 
 </html>

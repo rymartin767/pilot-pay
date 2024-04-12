@@ -1,8 +1,12 @@
 <a href="/">
-    <!-- <svg class="w-16 h-16" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z" fill="#6875F5"/>
-        <path d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z" fill="#6875F5"/>
-    </svg> -->
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-current text-black size-16"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M205.3 174.6c0 21.1-14.2 38.1-31.7 38.1-7.1 0-12.8-1.2-17.2-3.7v-68c4.4-2.7 10.1-4.2 17.2-4.2 17.5 0 31.7 16.9 31.7 37.8zm52.6 67c-7.1 0-12.8 1.5-17.2 4.2v68c4.4 2.5 10.1 3.7 17.2 3.7 17.4 0 31.7-16.9 31.7-37.8 0-21.1-14.3-38.1-31.7-38.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zM185 255.1c41 0 74.2-35.6 74.2-79.6 0-44-33.2-79.6-74.2-79.6-12 0-24.1 3.2-34.6 8.8h-45.7V311l51.8-10.1v-50.6c8.6 3.1 18.1 4.8 28.5 4.8zm158.4 25.3c0-44-33.2-79.6-73.9-79.6-3.2 0-6.4 .2-9.6 .7-3.7 12.5-10.1 23.8-19.2 33.4-13.8 15-32.2 23.8-51.8 24.8V416l51.8-10.1v-50.6c8.6 3.2 18.2 4.7 28.7 4.7 40.8 0 74-35.6 74-79.6z"/></svg>
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" class="size-20">
+        <defs>
+            <linearGradient gradientUnits="userSpaceOnUse" x1="300.154" y1="93.79" x2="300.154" y2="457.806" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, -47.664906, -23.905493)">
+                <stop offset="0" style="stop-color: #bada55" />
+                <stop offset="1" style="stop-color: #758d29" />
+            </linearGradient>
+        </defs>
+        <path d="M 252.489 69.885 L 441.435 208.927 L 369.264 433.901 L 135.714 433.901 L 63.543 208.927 Z" style="stroke: rgb(53, 156, 85); paint-order: fill; fill: url('#gradient-0'); transform-origin: 252.489px 251.893px;" bx:shape="n-gon 252.489 271.108 198.67 201.223 5 0 1@65a4d5fb" />
+        <text style="fill: rgb(255, 255, 255); font-family: Arial, sans-serif; font-size: 19.4px; white-space: pre;" transform="matrix(15.558874130249023, 0, 0, 16.089567184448242, -1269.4744873046875, -3518.1279296875)" x="91.67" y="242.807">P</text>
+    </svg>
 </a>

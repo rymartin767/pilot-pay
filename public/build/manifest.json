@@ -1,6 +1,14 @@
 {
+  "public/demo-report-dark.png": {
+    "file": "assets/demo-report-dark-B-UJXxOm.png",
+    "src": "public/demo-report-dark.png"
+  },
+  "public/demo-report-light-square.webp": {
+    "file": "assets/demo-report-light-square-lICiGnQT.webp",
+    "src": "public/demo-report-light-square.webp"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-DDtOzUzS.css",
+    "file": "assets/app-EQ3ZTeNt.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },

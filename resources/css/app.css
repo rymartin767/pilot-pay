@@ -24,3 +24,23 @@ ol > li > ol {
 ol > li > ol > li {
     @apply mb-2 list-disc;
 }
+
+.light-bg-img {
+    background-image:
+        linear-gradient(to bottom, transparent, white),
+        url('/public/demo-report-dark.png');
+    width: 100%;
+    height: 320px;
+    background-size: cover;
+    color: white;
+}
+
+.dark-bg-img {
+    background-image:
+        linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(173, 172, 173, 0.73)),
+        url('/public/demo-report-dark.png');
+    width: 100%;
+    height: 320px;
+    background-size: cover;
+    color: white;
+}
