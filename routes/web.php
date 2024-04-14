@@ -1,8 +1,8 @@
 <?php
 
 use App\Livewire\Report\Show;
+use App\Http\Middleware\Admin;
 use App\Livewire\Report\Index;
-use App\Models\Report;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,7 +13,6 @@ Route::get('/reports', Index::class)
     ->middleware('web')
     ->name('reports.index');
 
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -22,4 +21,9 @@ Route::middleware([
 
     // REPORTS
     Route::get('reports/{report:slug}', Show::class)->name('reports.show');
+
+    // ADMIN
+    Route::get('admin', function() {
+        var_dump('admin middleware invoked');
+    })->middleware(Admin::class)->name('admin');
 });

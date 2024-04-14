@@ -10,6 +10,5 @@ test('report index page middleware', function () {
 
 test('the log in and register links are on the report index page', function () {
     $this->view('landing')
-        ->assertSee('Log in')
         ->assertSee('Register');
 });

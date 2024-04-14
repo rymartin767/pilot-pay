@@ -2,28 +2,25 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
 use Filament\Panel;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Auth\MustVerifyEmail;
 use Laravel\Jetstream\HasProfilePhoto;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable implements MustVerifyEmail, FilamentUser
 {
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
-    use MustVerifyEmail;
 
     public function canAccessPanel(Panel $panel): bool
     {
@@ -77,7 +74,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function isAdmin() : bool
     {
-        return $this->email == config('auth.admin_email');
+        return $this->email == config('auth.admin_email') && $this->id == config('auth.admin_id');
     }
 
     public function reports() : HasMany

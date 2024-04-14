@@ -1,4 +1,5 @@
 <div class="max-w-3xl mx-auto flex flex-col px-3">
+    <img src="logo-one.png" alt="" class="size-36 mx-auto mb-6">
     <div class="text-center font-albert font-extrabold text-3xl lg:text-6xl uppercase dark:text-white">Empowering pilots with vital insights</div>
     <div class="flex flex-row items-center text-center py-6">
         <div class="font-albert text-gray-400 dark:text-white/50 lg:text-2xl font-bold">Know your worth.</div>
@@ -10,16 +11,16 @@
         </div>
         <div class="font-albert dark:text-white/50 lg:text-2xl font-bold">Soar higher.</div>
     </div>
-    <div class="grid grid-cols-2 gap-4 mt-3">
+    <div class="grid grid-cols-2 gap-8 mt-3">
         <!-- IMAGE -->
-        <div class="bg-[url('/public/demo-report-light-square.webp')] dark:bg-[url('/public/demo-report-dark.png')] h-80 bg-cover col-span-2 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-2xl dark:shadow-blue-600 py-3 px-6">
+        <div class="bg-[url('/public/demo-report-light-square.webp')] dark:bg-[url('/public/demo-report-dark.png')] h-80 bg-cover col-span-2 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-lg dark:shadow-blue-600 py-3 px-6">
         </div>
         <!-- TEST IMAGE -->
-        <div class="light-bg-img col-span-2 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-2xl dark:shadow-blue-600 py-3 px-6">
-        </div>
+        <!-- <div class="light-bg-img col-span-2 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-lg dark:shadow-blue-600 py-3 px-6">
+        </div> -->
         <!-- END TEST IMAGE -->
         <!-- 3 STEP PLAN -->
-        <div class="col-span-2 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-2xl dark:shadow-blue-600 py-3 px-6">
+        <div class="col-span-2 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-md dark:shadow-blue-600 dark:ring-2 dark:ring-white/10 px-10 py-6">
             <div class="text-2xl lg:text-3xl font-albert font-bold mb-4 dark:text-white">WEBSITE PATHWAY</div>
             <ol class="relative text-gray-500 border-s border-gray-200 dark:border-gray-700 dark:text-white/50">
                 <li class="mb-10 ms-6">
@@ -71,10 +72,10 @@
         </div>
         <!-- REPORTS -->
         <a href="{{ route('reports.index') }}" class="col-span-2">
-            <div class="w-full bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-2xl dark:shadow-blue-600 px-3 py-8">
+            <div class="w-full bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-md dark:shadow-blue-600 dark:ring-2 dark:ring-blue-600/20 p-8">
                 <div class="flex flex-row">
-                    <div class="size-16 lg:size-20 rounded-full bg-gray-100 dark:bg-gray-600 content-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white/50 size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <div class="size-16 lg:size-20 rounded-full bg-gray-100 dark:bg-gray-600 content-center justify-center dark:border-2 dark:border-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path d="M168 80c-13.3 0-24 10.7-24 24V408c0 8.4-1.4 16.5-4.1 24H440c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H168zM72 480c-39.8 0-72-32.2-72-72V112C0 98.7 10.7 88 24 88s24 10.7 24 24V408c0 13.3 10.7 24 24 24s24-10.7 24-24V104c0-39.8 32.2-72 72-72H440c39.8 0 72 32.2 72 72V408c0 39.8-32.2 72-72 72H72zM176 136c0-13.3 10.7-24 24-24h96c13.3 0 24 10.7 24 24v80c0 13.3-10.7 24-24 24H200c-13.3 0-24-10.7-24-24V136zm200-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zM200 272H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
                         </svg>
                     </div>
@@ -83,7 +84,7 @@
                         <div class="text-sm lg:text-base dark:text-white/50 font-albert text-gray-700">View the latest compensation reports from pilots across the industry.</div>
                     </div>
                     <div class="content-center justify-center px-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white/50 size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
                         </svg>
                     </div>
@@ -92,10 +93,10 @@
         </a>
         <!-- REGISTER -->
         <a href="{{ route('register') }}" class="col-span-2">
-            <div class="w-full bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-2xl dark:shadow-blue-600 px-3 py-8">
+            <div class="w-full bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-md dark:shadow-blue-600 dark:ring-2 dark:ring-blue-600/20 p-8">
                 <div class="flex flex-row">
-                    <div class="size-16 lg:size-20 rounded-full bg-gray-100 dark:bg-gray-600 content-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white/50 size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <div class="size-16 lg:size-20 rounded-full bg-gray-100 dark:bg-gray-600 content-center justify-center dark:border-2 dark:border-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path d="M168 80c-13.3 0-24 10.7-24 24V408c0 8.4-1.4 16.5-4.1 24H440c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H168zM72 480c-39.8 0-72-32.2-72-72V112C0 98.7 10.7 88 24 88s24 10.7 24 24V408c0 13.3 10.7 24 24 24s24-10.7 24-24V104c0-39.8 32.2-72 72-72H440c39.8 0 72 32.2 72 72V408c0 39.8-32.2 72-72 72H72zM176 136c0-13.3 10.7-24 24-24h96c13.3 0 24 10.7 24 24v80c0 13.3-10.7 24-24 24H200c-13.3 0-24-10.7-24-24V136zm200-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H376c-13.3 0-24-10.7-24-24s10.7-24 24-24zM200 272H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80H408c13.3 0 24 10.7 24 24s-10.7 24-24 24H200c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
                         </svg>
                     </div>
@@ -104,7 +105,7 @@
                         <div class="text-sm lg:text-base dark:text-white/50 font-albert text-gray-700">Membership is free. Join and submit your 2023 compensation report.</div>
                     </div>
                     <div class="content-center justify-center px-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white/50 size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-slate-700 dark:text-white size-6 lg:size-8 mx-auto"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" />
                         </svg>
                     </div>

@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <div class="">
+    <div>
         @include('layouts.mobile-landing')
     </div>
 </x-guest-layout>

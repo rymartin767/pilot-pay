@@ -16,6 +16,12 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        if (Auth::user()) {
+            if (Auth::user()->isAdmin()) {
+                return $next($request);
+            }
+        }
+    
+        return abort(403, 'Admin Area Only!');
     }
 }

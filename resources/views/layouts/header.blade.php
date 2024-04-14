@@ -4,13 +4,19 @@
         <div class="flex justify-between items-center">
             <div class="mb-6 md:mb-0">
                 <a href="https://pilot-pay.com/" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="Pilot Pay Logo" />
+                    <img src="/logo-one.png" class="size-8 me-3" alt="Pilot Pay Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pilot Pay</span>
                 </a>
             </div>
             <nav class="flex flex-row space-x-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 <a href="{{ route('reports.index') }}" class="">Reports</a>
-                <a href="{{ route('register') }}" class="">Register</a>
+                @guest
+                    @if (! request()->routeIs('register'))
+                        <a href="{{ route('register') }}" class="">Register</a>
+                    @else
+                        <a href="{{ route('login') }}" class="">Log In</a>
+                    @endif
+                @endguest
             </nav>
         </div>
     </div>
