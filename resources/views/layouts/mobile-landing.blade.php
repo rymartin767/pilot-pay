@@ -2,7 +2,7 @@
     <img src="logo-one.png" alt="" class="size-36 mx-auto mb-6">
     <div class="text-center font-albert font-extrabold text-3xl lg:text-6xl uppercase dark:text-white">Empowering pilots with vital insights</div>
     <div class="flex flex-row items-center text-center py-6">
-        <div class="font-albert text-gray-400 dark:text-white/50 lg:text-2xl font-bold">Know your worth.</div>
+        <div class="font-albert text-emerald-700 dark:text-white/50 lg:text-2xl font-bold">Know your worth.</div>
         <div class="flex flex-row flex-1 px-2">
             <hr class="w-full h-1 mx-auto border-0 rounded md:my-3 bg-gradient-to-r from-slate-200 to-slate-500">
             <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512" class="size-6 pt-1"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

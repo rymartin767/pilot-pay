@@ -7,11 +7,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing');
-})->middleware('guest');
+})->middleware('guest')->name('landing');
 
 Route::get('/reports', Index::class)
     ->middleware('web')
     ->name('reports.index');
+
+Route::view('terms', 'terms-and-conditions')
+    ->middleware('web')
+    ->name('terms');
 
 Route::middleware([
     'auth:sanctum',
