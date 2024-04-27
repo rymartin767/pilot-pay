@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Report extends Model
 {
@@ -30,6 +30,7 @@ class Report extends Model
         
         static::creating(function (Report $report) {
             $report->slug = Str::of($report->wage_year . '-' . $report->user->name . '-' . $report->employer)->slug();
+            $report->employer_logo_url = 'logos/' . Str::of($report->employer)->slug() . '-300.webp';
         });
     }
 

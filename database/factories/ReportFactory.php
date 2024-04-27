@@ -24,8 +24,6 @@ class ReportFactory extends Factory
             'user_id' => User::factory(),
             'wage_year' => '2023',
             'longevity' => Number::ordinal($this->faker->numberBetween(1,12)) . ' Year',
-            'employer' => 'Atlas Air',
-            'employer_logo_url' => 'logos/atlas-air-300.webp',
             'fleet' => collect(ReportFleets::cases())->shuffle()->first()->name,
             'seat' => $this->faker->boolean(50) ? 'CA' : 'FO',
         ];
