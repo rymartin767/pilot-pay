@@ -114,7 +114,7 @@ class ReportResource extends Resource
                             ->numeric()
                             ->prefixIcon('heroicon-o-currency-dollar')
                             ->suffix('USD')
-                            ->label('Gross W2 Wages (Flight Pay + Retro Pay)')
+                            ->label('Total Compensation')
                             ->columnSpan(1),
                         // Flight Pay
                         Textinput::make('flight_pay')
@@ -175,6 +175,7 @@ class ReportResource extends Resource
                                 0 => 'Non-Commuter',
                                 1 => 'Commuter'
                             ])
+                            ->label('Commuter Status')
                             ->nullable(),
                         Select::make('block_hours_flown')
                             ->nullable()

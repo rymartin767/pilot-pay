@@ -1,15 +1,19 @@
 <x-guest-layout>
     <section class="max-w-7xl mx-auto">
         <div class="grid grid-cols-4 gap-4">
-            <div class="col-span-2 content-center">
-                <div class="flex flex-col">
-                    <div class="font-albert font-extrabold text-6xl dark:text-white/90">Pilot Pay</div>
+            <div class="col-span-4">
+                <img src="{{ asset('logo-one.png') }}" alt="" class="lg:hidden size-40 mx-auto">
+            </div>
+
+            <div class="col-span-4 lg:col-span-2 content-center">
+                <div class="flex flex-col px-3 py-6 space-y-3">
+                    <div class="font-albert font-extrabold text-3xl lg:text-6xl dark:text-white/90">Pilot-Pay.com</div>
                     <div class="font-albert font-extrabold text-xl dark:text-gray-500">Elevate your earnings with precision and industry insights.</div>
                     <div class="flex flex-row items-center text-center py-2">
                         <div class="font-albert text-emerald-700 dark:text-white/90 lg:text-2xl font-bold">Know your worth.</div>
-                        <div class="flex flex-row flex-1 px-2">
+                        <div class="flex flex-row flex-1 px-2 items-center space-x-2">
                             <hr class="w-full h-1 mx-auto border-0 rounded md:my-3 bg-gradient-to-r from-slate-200 to-slate-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512" class="fill-current text-black dark:text-white size-6 pt-1"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512" class="fill-current text-black dark:text-white size-6"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z" />
                             </svg>
                         </div>
@@ -17,8 +21,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-2">
-                <img src="{{ asset('landing.jpg') }}" alt="" class="size-80 mx-auto rounded-full">
+            <div class="col-span-4 lg:col-span-2">
+                <img src="{{ asset('landing.jpg') }}" alt="" class="hidden lg:block size-80 mx-auto rounded-full">
             </div>
 
             <!-- timeline -->

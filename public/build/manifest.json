@@ -3,17 +3,13 @@
     "file": "assets/demo-report-dark-B-UJXxOm.png",
     "src": "public/demo-report-dark.png"
   },
-  "public/demo-report-light-square.webp": {
-    "file": "assets/demo-report-light-square-lICiGnQT.webp",
-    "src": "public/demo-report-light-square.webp"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-BDVdGbgx.css",
+    "file": "assets/app-DOz_Bngq.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DPALcuER.js",
+    "file": "assets/app-C1-XIpUa.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

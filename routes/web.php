@@ -17,6 +17,10 @@ Route::view('terms', 'terms-and-conditions')
     ->middleware('web')
     ->name('terms');
 
+Route::view('privacy', 'privacy')
+    ->middleware('web')
+    ->name('privacy');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
